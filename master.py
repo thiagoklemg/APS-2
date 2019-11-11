@@ -1,43 +1,101 @@
 from tkinter import *
-import time 
+import time
 
-#Inicia programa tela principal
-#==================================================================
-jinicial = Tk()
-jinicial.title("Reciclar")
+def HomePage():
+    #inicia a tela inicial dentro de uma função
+    JanelaInicial = Tk()
+    JanelaInicial.title("Reciclar")
+    #funcao para a janela papel e suas utilidades
 
-#Chama o processo da tela do papel
-def bt_papel():
-    jinicial.destroy()
-#Encerra o processo datela do papel
+    def Papel():
+        JanelaPapel = Tk()
+        JanelaPapel.title("Papel")
+        #função para o botão voltar funcionar
 
-#Chama o processo de encerrar o programa
-#==================================================================
-def bt_sair():
-    jinicial.destroy()
-#==================================================================
+        def Voltar():
+            return JanelaPapel.destroy()
+        BotaoVoltar = Button(JanelaPapel, text="Voltar", width=10, command=Voltar)
+        BotaoVoltar.place(x=300, y=10)
+        JanelaPapel.geometry("700x770+0+0")
+        JanelaPapel.mainloop()
 
-#Cria os botoes na tela principal
-#==================================================================
-btpapel = Button(jinicial, text='Papel', width=10, command=bt_papel)
-btpapel.place(x=300, y=10)
-btvidro = Button(jinicial, text='Vidro', width=10)
-btvidro.place(x=300, y=110)
-btplastico = Button(jinicial, text='Plástico', width=10)
-btplastico.place(x=300, y=210)
-btmetal = Button(jinicial, text='Metal', width=10)
-btmetal.place(x=300, y=310)
-btSair = Button(jinicial, text='Sair', width=10, command=bt_sair)
-btSair.place(x=500, y=310)
+#TELA INICIAL
+#*****************
+    BotaoPapel = Button(JanelaInicial, text='Papel', width=10, command=Papel)
+    BotaoPapel.place(x=300, y=10)
+#*******************
+#Funcao para a janela do vidro
+
+    def Vidro():
+        JanelaVidro = Tk()
+        JanelaVidro.title("Vidro")
+        #função para o botão voltar funcionar
+
+        def Voltar():
+            return JanelaVidro.destroy()
+        BotaoVoltar = Button(JanelaVidro, text="Voltar", width=10, command=Voltar)
+        BotaoVoltar.place(x=300, y=10)
+        JanelaVidro.geometry("700x770+0+0")
+        JanelaVidro.mainloop()
+
+#TELA INICIAL
+#*******************
+    BotaoVidro = Button(JanelaInicial, text='Vidro', width=10, command=Vidro)
+    BotaoVidro.place(x=300, y=110)
+#********************
+
+#Funcao para a janela do PLASTICO
+    def Plastico():
+        JanelaPlastico = Tk()
+        JanelaPlastico.title("Vidro")
+        #função para o botão voltar funcionar
+
+        def Voltar():
+            return JanelaPlastico.destroy()
+        BotaoVoltar = Button(JanelaPlastico, text="Voltar", width=10, command=Voltar)
+        BotaoVoltar.place(x=300, y=10)
+        JanelaPlastico.geometry("700x770+0+0")
+        JanelaPlastico.mainloop()
+
+#TELA INICIAL
+#*******************
+    BotaoPlastico = Button(JanelaInicial, text='Plástico', width=10, command=Plastico)
+    BotaoPlastico.place(x=300, y=210)
+#*******************
+
+    def Metal():
+        JanelaMetal = Tk()
+        JanelaMetal.title("Vidro")
+        #função para o botão voltar funcionar
+
+        def Voltar():
+            return JanelaMetal.destroy()
+        BotaoVoltar = Button(JanelaMetal, text="Voltar", width=10, command=Voltar)
+        BotaoVoltar.place(x=300, y=10)
+        JanelaMetal.geometry("700x770+0+0")
+        JanelaMetal.mainloop()
+
+#TELA INICIAL
+#*******************
+    BotaoMetal = Button(JanelaInicial, text='Metal', width=10, command=Metal)
+    BotaoMetal.place(x=300, y=310)
+#*******************
+
+#Função para Destruir a TELA INICIAL
+    def Sair():
+        return JanelaInicial.destroy()
+
+#TELA INICIAL
+#*******************
+    BotaoSair = Button(JanelaInicial, text='Sair', width=10, command=Sair)
+    BotaoSair.place(x=500, y=310)
+#*******************
 #Encerra os botões na tela principal
 #==================================================================
-jinicial.geometry("700x770+0+0")
-jinicial.mainloop()
-#Encerra a jinicial principal
-#==================================================================
-#Inicia programa tela papel
-#==================================================================
-jaapel = Tk()
-jpapel.title("Papel")
-jpapel.geometry("700x770+0+0")
-jpapel.mainloop()
+    JanelaInicial.geometry("700x770+0+0")
+    JanelaInicial.mainloop()
+
+#PROGRAMA PRINCIPAL
+#---chama a funcão em que ta todo o programa---
+HomePage()
+
