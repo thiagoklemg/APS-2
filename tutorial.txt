@@ -1,0 +1,8 @@
+instalar biblioteca localização
+	pip install geopy
+
+instalar biblioteca gerar exe
+	pip install pyinstaller
+
+gerar exe
+	pyinstaller arquivo.py
